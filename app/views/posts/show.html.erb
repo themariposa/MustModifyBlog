@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  Johnathon Wright
+</p>
+
+<p>
+  <strong>Blog entry:</strong>
+  <%= @post.content.html_safe %>
+</p>
+
+<% if user_signed_in? %>
+	<%= link_to 'Edit', edit_post_path(@post) %>
+	<% end %>
+<br>
+<br>
+<br>
+<div id="comments">
+	<%= render 'comments/form', comment: @comment %>
+
+	<% @post.comments.each do |comment| %>
+			<p>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<%= comment.author %> said:
+					</div>
+					<div class="panel-body">
+						<%= comment.content.to_s.html_safe %>
+					</div>
+				</div>
+			</p>
+	<% end %>
+
+</div>
+
+<%= link_to 'Back', posts_path %>
