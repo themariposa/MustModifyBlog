@@ -2,8 +2,11 @@
 <% if user_signed_in?%>
   <h1> Welcome <%= current_user %></h1>
 <% end %>
+<h1>MustModify Blog Posts</h1><br>
+<% if user_signed_in? %>
 <%= link_to 'New Post', new_post_path %>
-<h1>Blog Posts</h1>
+<% else %>
+<% end %>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -20,9 +23,13 @@
         <td><%= post.title %></td>
         <td><%= post.content %></td>
         <br>
+        <% if user_signed_in? %>
         <td><%= link_to 'Show', post, class:"btn btn-info" %></td>
         <td><%= link_to 'Edit', edit_post_path(post), class:"btn btn-info" %></button></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-info" %></button></td>
+        <% else %>
+        <td><%= link_to 'Show', post, class:"btn btn-info" %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
