@@ -1,0 +1,2 @@
+module LabNotesHelper
+end

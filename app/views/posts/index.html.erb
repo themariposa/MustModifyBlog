@@ -2,7 +2,7 @@
 <% if user_signed_in?%>
   <h1> Welcome <%= current_user %></h1>
 <% end %>
-<h1>MustModify Blog Posts</h1><br>
+<h1>Blog Posts</h1><br>
 <% if user_signed_in? %>
 <%= link_to 'New Post', new_post_path %>
 <% else %>
@@ -11,9 +11,10 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Blog Entry</th>
+      <th>Blog Post</th>
       <th>Category</th>
       <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -22,6 +23,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
+        <td><%= post.category %></td>
         <br>
         <% if user_signed_in? %>
         <td><%= link_to 'Show', post, class:"btn btn-info" %></td>
@@ -30,6 +32,15 @@
         <% else %>
         <td><%= link_to 'Show', post, class:"btn btn-info" %></td>
         <% end %>
+        <td>
+          <% if !user_signed_in? %> 
+            <!-- do nothing -->
+          <% elsif (post.published) %>
+          Published
+          <% else %>
+              draft
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

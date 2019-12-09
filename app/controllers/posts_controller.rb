@@ -8,7 +8,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.page(params[:page])
+    if user_signed_in?
+      @posts = Post.all.page(params[:page])
+    else
+      @posts = Post.where(published:true).page(params[:page])
+    end
   end
 
   # GET /posts/1
@@ -74,6 +78,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :category)
+      params.require(:post).permit(:title, :content, :category, :published, :text)
     end
 end

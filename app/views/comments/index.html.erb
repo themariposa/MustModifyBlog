@@ -17,9 +17,12 @@
         <td><%= comment.author %></td>
         <td><%= comment.content %></td>
         <br>
+        <% if !user_signed_in? %>
+        <% else %>
         <td><%= link_to 'Show', comment, class:"btn btn-info" %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment), class:"btn btn-info" %></button></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-info" %></button></td>
+        <% end %>
       </tr>
       </tr>
     <% end %>

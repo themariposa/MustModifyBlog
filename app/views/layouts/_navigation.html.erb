@@ -1,26 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">MustModify Blog</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <ul class="nav-item">
+        <%= link_to 'Home', 'http://www.mustmodify.com', class: 'nav-link' %>
+    </ul>
+    <ul class="nav-item">
+        <%= link_to 'Portfolio', 'http://www.mustmodify.com/portfolio' , class: 'nav-link' %>
+    </ul>
+    <ul class="nav-item">
+        <%= link_to 'Blog', blog_path(), class: 'nav-link' %>
+    </ul>
+    <ul class="nav-item">
+        <%= link_to 'Lab Notes', lab_notes_path(), class: 'nav-link' %>
+    </ul>
+    <ul class="nav-item">
+        <%= link_to 'GitHub', 'https://github.com/mustmodify', class: 'nav-link' %>
+    </ul>
+    <ul class="nav-item">
+        <%= link_to 'Contact', '/pages/contact', class: 'nav-link' %>
+    </ul>
+    <ul class="navbar-nav mr-auto"></ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li class="nav-item">
+                <%= link_to 'Edit Profile', edit_user_path(current_user), class: 'nav-link' %>
+            </li>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item active">
-            <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-          </li>
-        <% if user_signed_in? %>
-          <li class="nav-item">
-              <%= link_to 'Edit Profile', edit_user_path(current_user), class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/logout">Logout</a>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
-          </li>
-        <% end %>
-      </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Admin Login</a>
+            </li>
+          <% end %>
+        </ul>
+    </div>
   </div>
 </nav>
+
+  
