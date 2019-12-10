@@ -3,5 +3,5 @@ class Post < ApplicationRecord
 
 	has_rich_text :text
 
-	paginates_per 3
+	paginates_per 8
 end

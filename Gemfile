@@ -28,6 +28,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'carrierwave', '~> 1.0'
 
 gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 gem 'better_errors'
 

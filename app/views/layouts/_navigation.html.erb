@@ -1,25 +1,22 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <ul class="nav-item">
-        <%= link_to 'Home', 'http://www.mustmodify.com', class: 'nav-link' %>
-    </ul>
-    <ul class="nav-item">
-        <%= link_to 'Portfolio', 'http://www.mustmodify.com/portfolio' , class: 'nav-link' %>
-    </ul>
-    <ul class="nav-item">
-        <%= link_to 'Blog', root_path, class: 'nav-link' %>
-    </ul>
-    <ul class="nav-item">
-        <%= link_to 'Lab Notes', lab_notes_path(), class: 'nav-link' %>
-    </ul>
-    <ul class="nav-item">
-        <%= link_to 'GitHub', 'https://github.com/mustmodify', class: 'nav-link' %>
-    </ul>
-    <ul class="nav-item">
-        <%= link_to 'Contact', '/pages/contact', class: 'nav-link' %>
-    </ul>
-    <ul class="navbar-nav mr-auto"></ul>
-        <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+          <%= link_to 'Home', 'http://www.mustmodify.com', class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+          <%= link_to 'Portfolio', 'http://www.mustmodify.com/portfolio' , class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+          <%= link_to 'Blog', root_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+          <%= link_to 'GitHub', 'https://github.com/mustmodify', class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+          <%= link_to 'Contact', '/pages/contact', class: 'nav-link' %>
+      </li>
+        
           <% if user_signed_in? %>
             <li class="nav-item">
                 <%= link_to 'Edit Profile', edit_user_path(current_user), class: 'nav-link' %>
@@ -37,5 +34,21 @@
     </div>
   </div>
 </nav>
+<div id="banner-wrapper">
+<div class = "container">
+<img class="avatar" src="/assets/johnathon_wright_rails_consultant.png">
+<h1>
+<div class="firstname">Johnathon</div>
+<div class="lastname">Wright</div>
+</h1>
+<p>
+I am a developer and consultant, writing software for the web. I bring intensity, integrity and intellect to everything I do. I use the word
+<span class="awesome">awesome</span>
+constantly. I find great value in the concepts of the
+<a href="http://www.agilemanifesto.org">the Agile Manifesto</a>
+and look for value in industry best practices.
+</p>
+</div>
+</div>
 
   
