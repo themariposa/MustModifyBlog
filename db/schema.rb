@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_05_192601) do
+ActiveRecord::Schema.define(version: 2019_12_19_030450) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -55,9 +55,11 @@ ActiveRecord::Schema.define(version: 2019_12_05_192601) do
     t.string "title"
     t.text "content"
     t.string "category"
+    t.string "slug"
+    t.boolean "published"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "published"
+    t.index ["slug", "created_at"], name: "index_posts_on_slug_and_created_at"
   end
 
   create_table "users", force: :cascade do |t|
