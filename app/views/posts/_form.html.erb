@@ -35,6 +35,11 @@
     <%= form.text_area :markdown_content, class: 'form-control', rows: 6 %>
   </div>
 
+  <div class="form-group">
+    <%= form.label :created_at, 'Publication Date' %>
+    <%= form.text_field :created_at, class: "form-control" %>
+  </div>
+
     <div class="form-check">
         <%= form.check_box :published, class: "form-check-input" %>
 
