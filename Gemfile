@@ -26,6 +26,7 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'carrierwave', '~> 1.0'
+gem 'redcarpet' # markdown2html
 
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
