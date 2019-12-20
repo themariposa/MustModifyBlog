@@ -6,10 +6,12 @@
 					<p><h1><%= @post.title %></h1></p>
 					<p><strong>By: Johnathon Wright on:</strong>
 					<span class="creation_date"><%= @post.created_at.to_date.strftime('%B %d, %Y')%></span></p>
-					<p><%= @post.text %></p>
-
 					<% if user_signed_in? %>
-						<%= link_to 'Edit', edit_post_path(@post) %>
+						<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %>
+					<% end %>
+					<p><%= @post.text %></p>
+					<% if user_signed_in? %>
+						<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %>
 					<% end %>
 					<br>
 					<br>
