@@ -26,12 +26,17 @@
   </div>
 
   <div class="form-group">
-    <%= form.label :content %>
+    <%= form.label 'Body', for: :text %>
     <%= form.rich_text_area :text %>
   </div>
 
   <div class="form-group">
-    <%= form.label :created_at %>
+    <%= form.label :markdown_content %>
+    <%= form.text_area :markdown_content, class: 'form-control', rows: 6 %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :created_at, 'Publication Date' %>
     <%= form.text_field :created_at, class: "form-control" %>
   </div>
 

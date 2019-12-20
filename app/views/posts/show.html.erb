@@ -10,6 +10,12 @@
 						<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %>
 					<% end %>
 					<p><%= @post.text %></p>
+					<% if @post.text.blank? %>
+					    <%= markdown2html(@post.markdown_content) %>
+				        <% else %>
+				           <%= @post.text %>
+
+			         <% end %>
 					<% if user_signed_in? %>
 						<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %>
 					<% end %>

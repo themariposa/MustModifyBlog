@@ -19,7 +19,16 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find(params[:id])
+    if params[:id] # the traditional way
+      @post = Post.find(params[:id])
+    else
+      @post = Post.find_by_permalink(params[:year], params[:month], params[:day], params[:slug])
+    end
+
+    if !@post || !@post.published
+      redirect_to root_path
+    end
+
     @comment = Comment.new(post: @post)
   end
 
@@ -85,6 +94,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :category, :published, :text, :created_at)
+      params.require(:post).permit(:title, :markdown_content, :category, :published, :text, :created_at)
     end
 end
