@@ -26,8 +26,13 @@
   </div>
 
   <div class="form-group">
-    <%= form.label :content %>
+    <%= form.label 'Body', for: :text %>
     <%= form.rich_text_area :text %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :markdown_content %>
+    <%= form.text_area :markdown_content, class: 'form-control', rows: 6 %>
   </div>
 
     <div class="form-check">
