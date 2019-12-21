@@ -40,12 +40,17 @@ font-size: 18px;
     background: radial-gradient( 60% 0%, cover, #3F7F7F, #143953 50% );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3F647F, endColorstr=#143953);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#3F647F, endColorstr=#143953)";
-    padding-top: 16px;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    @media only screen and (max-width: 991px) {
+          padding-bottom: 1.3rem;
+        }
 
     .avatar {
        display: inline-block;
        padding-right: 20px;
        padding-top: 4px;
+
    }
 
    h1 {
@@ -66,15 +71,20 @@ font-size: 18px;
       font-family: Ganymede;
     }
 
-    a { 
+    a {
       font-size: 23px;
-      font-family: Ganymede; 
+      font-family: Ganymede;
     }
     .firstname, .lastname {
       font-family: Ganymede;
       font-size: 48px;
     }
-    p {
+
+        @media only screen and (max-width: 991px) {
+          padding-bottom: 1.3rem;
+        }
+
+    .nav-bio {
         padding-left: 100px;
         display: inline-block;
         margin-top: 5px;
@@ -86,9 +96,20 @@ font-size: 18px;
         font-family: Ganymede;
         font-size: 23px;
         line-height: 1em;
-      }
+
+        @media only screen and (max-width: 991px) {
+          display: none;
+        }
+    }
+
 }
 
+      .navbar-toggler {
+        font-size: 1.5rem;
+        font-family: Ganymede;
+        color: white;
+        text-shadow: 0px 0px 18px cyan;
+      }
 .postcard {
     display: flex;
     flex-direction: column;
