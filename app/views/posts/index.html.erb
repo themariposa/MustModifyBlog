@@ -1,10 +1,10 @@
-<p id="notice"><%= notice %></p>
+
 <% if user_signed_in?%>
   <h1> Welcome <%= current_user %></h1>
 <% end %>
 <br>
 <% if user_signed_in? %>
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
 <% else %>
 <% end %>
 <% if params[:category] %>
