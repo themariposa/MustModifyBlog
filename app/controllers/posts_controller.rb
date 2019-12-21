@@ -22,11 +22,13 @@ class PostsController < ApplicationController
     if params[:id] # the traditional way
       @post = Post.find(params[:id])
     else
-      @post = Post.find_by_permalink(params[:year], params[:month], params[:day], params[:slug])
-    end
+      scope = Post.where('DAY(created_at) = :day AND MONTH(created_at) = :month AND YEAR(created_at) = :year', {year: params[:year], month: params[:month], day: params[:day]}).where(slug: params[:slug])
 
-    if !@post || !@post.published
-      redirect_to root_path
+      if !current_user
+        @post = scope.where(published: true).first!
+      else
+        @post = scope.first!
+      end
     end
 
     @comment = Comment.new(post: @post)

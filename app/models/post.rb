@@ -10,11 +10,6 @@ class Post < ApplicationRecord
 
   scope :published, -> { where(published: true)}
 
-  def self.find_by_permalink(year, month, day, slug)
-    Post.where('STRFTIME("%d", created_at) = :day AND STRFTIME("%m", created_at) = :month AND STRFTIME("%Y", created_at) = :year', {year: year, month: month, day: day}).where(slug: slug, published: true).first!
-    #Post.where('DAY(created_at) = :day AND MONTH(created_at) = :month AND YEAR(created_at) = :year', {year: year, month: month, day: day}).where(slug: slug, published: true)
-  end
-
   def title=(value)
     write_attribute(:title, value)
     if slug.blank?
