@@ -1,0 +1,19 @@
+:javascript
+  // hack... $.fn.cycle is loaded during packs/application.js but then
+  // isn't there on pageload.
+
+  $.fn.cycle = window.cycle;
+
+  function run_slideshow()
+  {
+    $('#featured').cycle({fx: 'fade', timeout: 7000, speed:1000});
+  }
+
+  window.onload = run_slideshow;
+
+.container
+  #featured
+    =render :partial => 'featured/nasa'
+    =render :partial => 'featured/saw'
+    =render :partial => 'featured/physioage'
+

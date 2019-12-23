@@ -1,0 +1,24 @@
+#footer-wrapper {
+  background-color: #222;
+  background: #222;
+  background: -webkit-radial-gradient(top, #4A8190 0%, #222 50%, #010101);
+  background: -moz-radial-gradient(top, #4A8190 0%, #222 50%, #010101);
+  background: radial-gradient(to bottom, #4A8190 0%, #222 50%, #010101);
+
+  color: white;
+}
+
+#footer {
+  padding: 3rem 0;
+
+  .contact {
+    font-family: Ganymede;
+    font-size: 1.6rem;
+
+    h2 {
+      padding-top: 1.3rem;
+      border-bottom: 2px dotted #999;
+    }
+  }
+}
+

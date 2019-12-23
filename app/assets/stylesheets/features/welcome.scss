@@ -1,0 +1,105 @@
+.splash {
+  background-image: url(/assets/welcome-splash-rails-website-consulting.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 60vh;
+
+  h1 {
+    color: white;
+  }
+}
+
+#welcome-wrapper {
+  background-color: #D8F4FF;
+  background: -moz-linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
+  background: -ms-linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
+  background: -o-linear-gradient(#B6E0F0, #88CEE7, 3px #D8F4FF 15px);
+  background: -webkit-linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#88CEE7, endColorstr=#D8F4FF);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#88CEE7, endColorstr=#D8F4FF)";
+  border-bottom: 1px solid #88CEE7;
+
+  #featured {
+    padding: 20px 10px 0;
+
+    .project-description p {
+      color: #3B5F5F;
+
+      margin-top: 15px;
+
+      font-family: 'Open Sans';
+      font-size: 1.3rem;
+      line-height: 1.4em;
+    }
+
+    height: 400px;
+
+    @media only screen and (max-width: 767px) {
+      height: 90vh;
+    }
+
+    .featured-client {
+      display: none;
+
+      &:first-child {
+        display: block;
+      }
+      .featured-image {
+        text-align: center;
+      }
+      img {
+        margin: 2rem auto 0;
+        box-shadow: -4px 4px 14px #3B5F5F;
+
+        width: 90%;
+        height: auto;
+
+        @media only screen and (max-width: 767px) {
+          width: 80vw;
+        }
+      }
+
+      h1 {
+        padding-top: 0.5em;
+        color: #E33052;
+
+        -moz-text-shadow: 3px 2px 5px #BBB;
+        -webkit-text-shadow: 3px 2px 5px #BBB;
+        text-shadow: 3px 2px 5px #BBB;
+      }
+    }
+  }
+}
+
+#open-source {
+  text-align: left;
+  color: #707070;
+  padding-top: 20px;
+  font-size: 1.4rem;
+
+  display: flex;
+
+  .project {
+    flex: 3;
+    display: inline-block;
+    padding-bottom: 25px;
+    vertical-align: top;
+  }
+
+  .intro {
+    flex: 4;
+  }
+
+  .project + .project {
+    margin-left: 2rem;
+  }
+
+  .project a:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    width: 45px;
+    padding-right: 6px;
+  }
+}

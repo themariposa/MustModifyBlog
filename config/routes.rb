@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "posts#index"
+  root "pages#welcome"
 
   constraints :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ do
     get ':year/:month/:day/:slug' => 'posts#show'
