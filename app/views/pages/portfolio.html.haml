@@ -1,0 +1,115 @@
+-page_title "Portfolio"
+
+.portfolio
+  .project-container
+    .project.container
+      =image_tag('portfolio/furniture-repair-rails-app.png', alt: "Furniture Repair Rails App Screenshot", class: 'thumb')
+      .description
+        %h2 SAW Enterprises
+        %p SAW came to me with an existing Rails site. After a fall-out with their previous developer, their site had been without maintenance for months and was starting to be a source of daily frustration. Since it was critical to their repair scheduling business, they needed someone they could trust to resolve some outstanding issues. After a few weeks of urgent fixes, we were able to transition to new functionality again. Over the next 10 years, their app became the centerpiece of their national operations. Their business grew as much as 30% per year, thanks to our combined efforts.
+        %p We release new features almost every week -- from automating something that was previously done manually, to giving management new visibility on their processes through reporting, to supporting new business objectives.
+
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/medical-rails-app-1.png', class: 'thumb')
+      .description
+        %h2 Medical App
+
+        %p This medical application has collected hundreds of datapoints for thousands of patients and over 10,000 timepoints. The data is used to do some predictive math about how patients are aging, which is then presented in a spectacular report.
+
+        %p I was approached by the PhysioAge team, who was in a difficult position. They were behind on their obligation to provide a site to their clients. Their relationship with their developer had soured. He would not be completing the project. Finally, it wasn't clear that they had a complete copy of their code.
+
+        %p I triaged the code. Unfortunately, the code base had some fundamental flaws that would never work in any production site, much less meet HIPPA standards. After a few weeks of intense debugging, we launched version 1.0. Since then I we have deployed new features every two weeks.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/inventory.png', class: 'thumb')
+      .description
+        %h2 Home Sweet Home Inventory
+
+        %p My client was a web design firm that needed to temporarily ramp up their capacity. They were looking for an experienced Rails developer to take over in the early stages of a new project. Challenges on this project included constant fine-turning by the end-client resulting in constant scope-creep, on-again off-again communication with the end-client resulting in weeks without activity followed by a flood of work, and some technical challenges including dealing with memberships and rounding corners with paperclip.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/prototype.png', class: 'thumb')
+      .description
+        %h2 DemocraThings Prototype
+
+        %p My client asked me to turn their business idea into a functioning prototype in just 10 days so that it could be shown to potential investors. We were able to accomplish a large amount of work in a short time by using pre-built parts and rapid feedback cycles.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/real-estate-rails-app-with-api.png', class: 'thumb')
+      .description
+        %h2 Australian Real Estate Showcase Site
+
+        %p My client manages listings for real estate agents in Australia. They created a rich API over the years, which they were in the process of transitioning to Rails. This project involved consuming the API via ActiveResources, displaying that information on a public-facing site, searching through listings, creating users, remembering favorite properties, and gathering data about users' interests. I worked with an existing template and, in slow steps, tried to improved the UI while using ajax in a less-flashy way to draw in more clients.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/photography-studio-rails-app.jpg', class: 'thumb')
+      .description
+        %h2 Siren Studios administrative site
+
+        %p Two Rails developer, a flash developer and a project manager walk into a bar....
+        %p Working with a team of four, we created a website for one of the trendiest photography studios in Los Angeles, Siren Studios. The front-end is all flash.  The back-end is Rails, including Paperclip for storing and resizing images, authlogic for authentication, and Enki for light-weight content management. The flash gets all its content from XML feeds managed and rendered by Rails.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/institution-management-rails-app.png', class: 'thumb')
+
+      .description
+        %h2 Institute Management System
+
+        %p The team created a web-based employee and project management system for a non-profit organization. This app replace their existing system, but the client had a wealth of ideas about expanding the system.  My role in this project was "technical lead". I set up the initial project and chose the gems we would be using to start. As the project got underway, I was just another developer, though as usual, I reviewed some of the commits as they came across, occasionally prodding devs to improve their code, and ensuring that test coverage was high.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/counselling-rails-app.png', class: 'thumb')
+
+      .description
+        %h2 Counselling Management System
+
+        %p This app brought greater visibility and control to a public counselling service. Case workers could manage clients, schedule sessions, and see summaries. Supervisors could see reports and had some limited visibility into client details. I joined this team when the project was already under way. Though I worked on many parts of the app, my biggest contributions were some interface improvements -- I added a scrollable list of check boxes in place of a multi-select dropdown.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/domain-catcher.jpg', class: 'thumb')
+
+      .description
+        %h2 Drop Catch Domain Analyzer
+
+        %p Every morning, this application retrieves a list of expiring domains, issues web service calls to Yahoo and Google to check for SEO value, categories the domains by keyword, and uses all that data plus some heuristics to create a customized report which is sent by email. In order to process the 10s of thousands of entries in a timely manner, it uses concurrent workers and job queues.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/food-rails-app.jpg', class: 'thumb')
+
+      .description
+        %h2 chow.com Rails App
+
+        %p I worked on a variety of bug-fixes and new features for this site. The most interesting task involved ajax-ifying some user-specific content on pages which were otherwise static. This allowed us to make better use of caching, while still providing a customized user experience.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/apartments-and-townhouse-rentals.jpg', class: 'thumb')
+
+      .description
+        %h2 RentalHouses.com Rails App
+
+        %p This Rails application is built on top of a fairly unusual data source . a hypercube engine. It was transitioned from .net to take advantage of Rails' fast development cycles and refactorability. Some of the major considerations during the development of the site were SEO, maintaining the existing link structure, and a fantastic user experience.
+
+  .project-container
+    .project.container
+      =image_tag('portfolio/ecommerce-app.png', class: 'thumb')
+
+      .description
+        %h2 MassageKing e-commerce web application
+
+        %p My first real web application was working on www.massageking.com. The company sells massage tables, charts, videos, massage lotion, etc., to massage therapists, chiropracters and day spas. The site was written in a framework we created with PHP.
+
+:javascript
+  $('.project a').click(function() {
+    $('<img src="' + $(this).attr('href') + '" />').dialog({modal:true, width:900}); return(false);
+  });

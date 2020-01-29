@@ -57,3 +57,10 @@
   </div>
 </div>
 
+<%- if !page_title.blank? %>
+  <div class="heading-wrapper">
+    <div class="container">
+      <h2><%= page_title %></h2>
+    </div>
+  </div>
+<% end %>

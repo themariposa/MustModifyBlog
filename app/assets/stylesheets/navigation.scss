@@ -118,3 +118,19 @@ font-size: 18px;
     line-height: 1.85714285714286;
     font-family: "Open Sans";
 }
+
+.heading-wrapper {
+  width: 100%;
+  border-bottom: 1px solid #88CEE7;
+  background-color: #D8F4FF;
+  background: -moz-linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
+  background: -ms-linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
+  background: -o-linear-gradient(#B6E0F0, #88CEE7, 3px #D8F4FF 15px);
+  background: -webkit-linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
+}
+
+.heading {
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}

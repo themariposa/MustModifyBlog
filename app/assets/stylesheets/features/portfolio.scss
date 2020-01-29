@@ -1,0 +1,27 @@
+.portfolio {
+  margin-top: 2.5rem;
+}
+
+.project-container {
+  background-image: linear-gradient( to bottom, white 0%, transparent 5%, white 70%), url("/assets/textures/spikes.png");
+}
+
+.project {
+  display: flex;
+  padding-bottom: 2rem;
+
+  .thumb {
+    padding: 1rem 20px 20px 20px;
+    margin: 1rem 20px 20px 0;
+    border: 1px solid #385F5F;
+    margin-right: 2rem;
+  }
+
+  .description {
+    flex: 1 1 0;
+    margin-top: 2rem;
+    max-width: 35vw;
+  }
+}
+
+
