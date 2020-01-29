@@ -10,7 +10,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-cd /projects/mustmodify/blog
+cd /projects/mustmodify/www
 
 nvm use
 rails s -p 35811 -b 0.0.0.0
