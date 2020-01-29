@@ -36,7 +36,7 @@
                 <% else %>
                   <%= link_to 'Read More', post_permalink_path(post), class:"btn btn-info" %>
                 <% end %>
-                <% if !user_signed_in? %> 
+                <% if !user_signed_in? %>
                   <!-- do nothing -->
                 <% elsif (post.published) %>
                   Published
