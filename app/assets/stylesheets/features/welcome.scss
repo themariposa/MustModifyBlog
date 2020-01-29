@@ -62,9 +62,6 @@
       h1 {
         padding-top: 0.5em;
         color: #E33052;
-
-        -moz-text-shadow: 3px 2px 5px #BBB;
-        -webkit-text-shadow: 3px 2px 5px #BBB;
         text-shadow: 3px 2px 5px #BBB;
       }
     }
@@ -101,5 +98,12 @@
   img {
     width: 45px;
     padding-right: 6px;
+  }
+
+  h1 {
+    padding-top: 0.5em;
+    margin-bottom: 2rem;
+    color: #E33052;
+    text-shadow: 3px 2px 5px #BBB;
   }
 }
