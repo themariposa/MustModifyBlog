@@ -22,11 +22,19 @@
               <%= post.title %>
               </h2>
               <% end %>
-            <h6 class="card-subtitle mb-2 text-muted"><%= link_to post.category, posts_path(category: post.category), class: "post-category" %>
-            <div class="text-muted"><%= post.created_at.to_date.strftime('%B %d, %Y')%></div>  
+            <h6 class="card-subtitle mb-2 text-muted">
+                <%= link_to post.category, posts_path(category: post.category), class: "post-category" %>
+              <div class="text-muted"><%= post.created_at.to_date.strftime('%B %d, %Y')%></div>
 
             </h6></header>
-              <main><p><h5 class="card-text post-text"><%= truncate(strip_tags(post.text.to_plain_text.gsub(/\[[^\]]*\]/, '')),length: 350, separator: ' ') %></h5></p></main>
+            <main>
+            <div class="card-text post-text">
+              <% if post.text.blank? %>
+                <%= truncate(strip_tags(post.markdown_content.gsub(/\[[^\]]*\]/, '')),length: 350, separator: ' ') %>
+              <% else %>
+                <%= truncate(strip_tags(post.text.to_plain_text.gsub(/\[[^\]]*\]/, '')),length: 350, separator: ' ') %>
+              <% end %>
+            </div></main>
               <br>
               <footer>
                 <% if user_signed_in? %>
