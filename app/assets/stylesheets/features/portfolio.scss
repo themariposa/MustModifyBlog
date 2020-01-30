@@ -1,14 +1,14 @@
 .portfolio {
-  margin-top: 2.5rem;
 }
 
 .project-container {
-  background-image: linear-gradient( to bottom, white 0%, transparent 5%, white 70%), url("/assets/textures/spikes.png");
+  background-image: radial-gradient( ellipse at top, transparent 5%, white 60%), url("/assets/textures/spikes.png");
 }
 
 .project {
   display: flex;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 
   .thumb {
     padding: 1rem 20px 20px 20px;
@@ -17,10 +17,57 @@
     margin-right: 2rem;
   }
 
-  .description {
+  .content {
+    margin-right: 2rem;
     flex: 1 1 0;
-    margin-top: 2rem;
-    max-width: 35vw;
+  }
+
+  .screen-shots {
+    width: 30%;
+  }
+
+  .description {
+    margin-right: 2rem;
+  }
+
+  q {
+    border: 2px dotted #42b9e0;
+    font-size: 1.25rem;
+    padding: 10px;
+    display: block;
+    margin: 1.5rem 0;
+  }
+
+  .heading {
+    margin: 0;
+    width: auto;
+
+    div {
+      padding: 15px 0;
+      margin: 0;
+      border-bottom: 1px solid lightblue;
+
+      &:last-child {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: none;
+      }
+    }
+
+    .heading-1 {
+      font-size: 2.5rem;
+      padding: 0 0 20px;
+      border-bottom: 1px solid lightblue;
+      margin: 0;
+    }
+
+    .heading-2 {
+      font-size: 1.8rem;
+    }
+
+    .heading-3 {
+      font-size: 1.3rem;
+    }
   }
 }
 

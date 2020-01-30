@@ -1,0 +1,118 @@
+---
+- codename: Castle
+  heading:
+  - Growing Furniture Repair Company
+  - From a small regional player to a recognized national leader
+  - Rapid growth supported by custom Rails software that evolved rapidly to meet the
+    changing business
+  description:
+  - This company started with one man repairing furniture in New York. This entrepreneur
+    hired a few employees and was expanding his business when I met him. They came
+    to me with an existing Rails site. After a fall-out with their previous developer,
+    their site had been without maintenance for months and was starting to be a source
+    of daily frustration. Since it was critical to their repair scheduling business,
+    they needed someone they could trust to resolve some outstanding issues. After
+    a few weeks of urgent fixes, we were able to transition to new functionality again.
+  - Over the next 10 years, their app became the centerpiece of their national operations.
+    Their business grew as much as 30% per year, thanks to our combined efforts.
+  - We release new features almost every week -- from automating something that was
+    previously done manually, to giving management new visibility on their processes
+    through reporting, to supporting new business objectives.
+  quotes:
+  - Johnathon has transformed the small initial program into the central nervous system
+    of our business. He has anticipated our needs, allowing us to pivot or plow ahead.
+  screen_shots:
+  - :src: furniture-repair-rails-app.png
+    :alt: Furniture Repair Rails App Screenshot
+- codename: reporting
+  heading:
+  - Supplemental Medical Result Presentation
+  - Like powerpoint for physician-patient consultationsj
+  description:
+  - This medical application has collected hundreds of datapoints for thousands of patients and over 10,000 timepoints. The data is used to do some predictive math about how patients are aging, which is then presented in a spectacular report.
+  - I was approached by the team after a falling out with their previous developer.
+  quotes:
+  - Johnathon has been a silent partner in our business for years. We highly recommend him.
+  screen_shots:
+  - src: medical-rails-app-1.png
+- codename: cj-api
+  heading:
+  - Medical Vacation Startup
+  - Disrupting the traditional medical pricing model
+  description:
+  - Unfortunately this software never fully took off. And most of my work was in designing an API anyway, so I don't have any screenshots.
+  quotes:
+  - I'm not sure I've ever worked with anyone on a contract basis who has taken the time to really understand the product/vision like you did and grasp it as quickly as you were able to do.
+- codename: 'home sweet home'
+  heading:
+  - 'Online Inventory System'
+  - 'keeping inventory records safe from loss or destruction'
+  description:
+  - My client was a web design firm that needed to temporarily ramp up their capacity. They were looking for an experienced Rails developer to take over in the early stages of a new project. Challenges on this project included constant fine-turning by the end-client resulting in constant scope-creep, on-again off-again communication with the end-client resulting in weeks without activity followed by a flood of work, and some technical challenges including dealing with memberships and rounding corners with paperclip.
+  screen_shots:
+  - src: inventory.png
+- codename: 'spike'
+  heading:
+  - DemocraThings Prototype
+  - From concept to proof-of-concept in 10 days.
+  description:
+  - My client asked me to turn their business idea into a functioning prototype in just 10 days so that it could be shown to potential investors. We were able to accomplish a large amount of work in a short time by using pre-built parts and rapid feedback cycles.
+  quotes:
+  - Love his technical expertise.
+  screen_shots:
+  - src: prototype.png
+- codename: real-estate
+  heading:
+  - Australian Real Estate Showcase Site
+  description:
+  - My client manages listings for real estate agents in Australia. They created a rich API over the years, which they were in the process of transitioning to Rails. This project involved consuming the API via ActiveResources, displaying that information on a public-facing site, searching through listings, creating users, remembering favorite properties, and gathering data about users' interests. I worked with an existing template and, in slow steps, tried to improved the UI while using ajax in a less-flashy way to draw in more clients.
+  quotes:
+  - Johnathon communicates technical details very well and has understood the requirements for the project without a great deal of explanation or input... I would not hesitate to recommend him to anyone seeking an expert Rails developer.
+  screen_shots:
+  - src: real-estate-rails-app-with-api.png
+- codename: siren
+  heading:
+  - Photography Studio Marketing Site (Backend + API)
+  - Two Rails developer, a flash developer and a project manager walk into a bar....
+  description:
+  - Working with a team of four, we created a website for one of the trendiest photography studios in Los Angeles, Siren Studios. The front-end is all flash.  The back-end is Rails, including Paperclip for storing and resizing images, authlogic for authentication, and Enki for light-weight content management. The flash gets all its content from XML feeds managed and rendered by Rails.
+  quotes:
+  - I'm very pleased with his work and would recommend him to anyone as a great Ruby on Rails engineer.
+  screen_shots:
+  - src: photography-studio-rails-app.jpg
+- codename: institute
+  heading:
+  - Institute Management System
+  description:
+  -  The team created a web-based employee and project management system for a non-profit organization. This app replace their existing system, but the client had a wealth of ideas about expanding the system.  My role in this project was "technical lead". I set up the initial project and chose the gems we would be using to start. As the project got underway, I was just another developer, though as usual, I reviewed some of the commits as they came across, occasionally prodding devs to improve their code, and ensuring that test coverage was high.
+  screen_shots:
+  - src: institution-management-rails-app.png
+- codename: domain-catcher
+  heading:
+  - Prospecting in the Dropped Domains market
+  description:
+  - Every morning, this application retrieves a list of expiring domains, issues web service calls to Yahoo and Google to check for SEO value, categories the domains by keyword, and uses all that data plus some heuristics to create a customized report which is sent by email. In order to process the 10s of thousands of entries in a timely manner, it uses concurrent workers and job queues.
+  screen_shots:
+  - src: domain-catcher.jpg
+- codename: chomp
+  heading:
+  - Busy food content site
+  description:
+  - I worked on a variety of bug-fixes and new features for this site. The most interesting task involved ajax-ifying some user-specific content on pages which were otherwise static. This allowed us to make better use of caching, while still providing a customized user experience.
+  screen_shots:
+  - src: food-rails-app.jpg
+- codename: apartments
+  heading:
+  - Real Estate Rental Finder
+  description:
+  - This Rails application is built on top of a fairly unusual data source . a hypercube engine. It was transitioned from .net to take advantage of Rails' fast development cycles and refactorability. Some of the major considerations during the development of the site were SEO, maintaining the existing link structure, and a fantastic user experience.
+  screen_shots:
+  - src: apartments-and-townhouse-rentals.jpg
+- codename: staples
+  heading:
+  - E-Commerce Website
+  - My first real programming job!
+  description:
+  - My first real web application was working on www.massageking.com. The company sells massage tables, charts, videos, massage lotion, etc., to massage therapists, chiropracters and day spas. The site was written in a framework we created with PHP.
+  screen_shots:
+  - src: ecommerce-app.png
