@@ -18,4 +18,6 @@
         .screen-shots
           -project['screen_shots'] && project['screen_shots'].each do |ss|
             -if ss['src']
-              =image_tag("portfolio/#{ss['src']}", alt: ss['alt'], class: 'thumb')
+              %figure.screen-shot
+                =image_tag("portfolio/#{ss['src']}", alt: ss['alt'], class: 'thumb')
+                %figcaption=ss['caption']
