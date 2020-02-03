@@ -1,14 +1,14 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.2"
 
-set :application, "mustmodify-http"
+set :application, "mustmodify-www"
 set :repo_url, "git@github.com:themariposa/MustModifyBlog.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/production/mustmodify-http"
+set :deploy_to, "/home/production/mustmodify-www"
 
 set :chruby_ruby, 'ruby-2.6.5'
 # Default value for :format is :airbrussh.
@@ -25,7 +25,7 @@ set :chruby_ruby, 'ruby-2.6.5'
 append :linked_files, "config/database.yml"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", ".bundle"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
