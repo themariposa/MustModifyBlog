@@ -1,3 +1,7 @@
+.shadowed {
+  box-shadow: 0 7px 20px 7px hsla(0, 0%, 0%, 0.15)
+}
+
 .splash {
   background-image: url(/assets/welcome-splash-rails-website-consulting.jpg);
   background-repeat: no-repeat;
@@ -9,17 +13,21 @@
   }
 }
 
-#welcome-wrapper {
-  background-color: #D8F4FF;
-  background: -moz-linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
-  background: -ms-linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
-  background: -o-linear-gradient(#B6E0F0, #88CEE7, 3px #D8F4FF 15px);
-  background: -webkit-linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#88CEE7, endColorstr=#D8F4FF);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#88CEE7, endColorstr=#D8F4FF)";
-  border-bottom: 1px solid #88CEE7;
+main {
+  section:nth-child(2) {
+    background: #D8F4FF linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
+    border-bottom: 1px solid #88CEE7;
+  }
 
+  section:nth-child(3) {
+    background-color: #F8F8F8;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255,255,255,0.3) 50%, rgba(255, 255, 255, 0)), url(/assets/textures/what-the-hex.png);;
+  }
+}
+
+#welcome-wrapper {
   #featured {
+    display: none;
     padding: 20px 10px 0;
 
     .project-description p {
@@ -69,28 +77,47 @@
 }
 
 #open-source {
-  text-align: left;
   color: #707070;
   padding-top: 20px;
-  font-size: 1.4rem;
 
-  display: flex;
+  .os-project-list {
+    display: flex;
+    flex-direction: row;
 
-  .project {
-    flex: 3;
-    display: inline-block;
-    padding-bottom: 25px;
-    vertical-align: top;
+    .os-image {
+      float: left;
+
+      color: #439F9E;
+      height: 5rem;
+      width: 5rem;
+
+      background-color: #ffffff9c;
+      border-radius: 25%;
+
+      margin-bottom: 0.25rem;
+      margin-right: 1.5rem;
+
+      font-size: 3rem;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .os-project{
+      color: white;
+
+      a {
+        color: white;
+      }
+      flex-direction: row;
+      flex: 1;
+
+      background-color: #439F9E;
+      .os-description {
+        flex: 1 1 0;
+        font-size: 1.4rem;
+      }
+    }
   }
-
-  .intro {
-    flex: 4;
-  }
-
-  .project + .project {
-    margin-left: 2rem;
-  }
-
   .project a:hover {
     text-decoration: underline;
   }
@@ -100,10 +127,98 @@
     padding-right: 6px;
   }
 
-  h1 {
+  h2 {
     padding-top: 0.5em;
     margin-bottom: 2rem;
-    color: #E33052;
+    font-size: 3rem;
+    text-align: left;
+    color: #3772FF;
+    margin-bottom: 2rem;
     text-shadow: 3px 2px 5px #BBB;
   }
+}
+
+#services {
+  padding: 4rem 0;
+
+  .services-heading {
+    h2 {
+      font-size: 3rem;
+      text-align: left;
+      color: #3772FF;
+      margin-bottom: 2rem;
+      text-shadow: 3px 2px 5px #BBB;
+    }
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: row;
+
+    .service {
+      flex: 1 1 0;
+      background-color: white;
+      padding: 2rem 2rem;
+
+      h3 {
+        margin-bottom: 1rem;
+        text-shadow: 3px 2px 5px #BBB;
+      }
+
+      .image {
+        text-align: center;
+
+        .fa {
+          //color: #3772FF;
+          color: #FFD25A;
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .service {
+        margin: 0 1.5rem;
+        box-shadow: 0 7px 20px 7px hsla(0, 0%, 0%, 0.10);
+
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .image {
+          margin-bottom: 2rem;
+        }
+        .fa {
+          font-size: 3rem;
+        }
+      }
+    }
+//    @media (max-width: 1199px) {
+//
+//      .service {
+//        border: 1px solid #E1E1E1;
+//        background-color: white;
+//        min-width: 40%;
+//        margin: 2rem;
+//      }
+//    }
+//
+//    @media (max-width: 776px) {
+    @media (max-width: 1199px) {
+      flex-wrap: wrap;
+      .service {
+        min-width: 100%;
+      }
+      border: 1px solid #E1E1E1;
+      background-color: white;
+      margin: 0;
+    }
+  }
+}
+
+.a-year-of-code img {
+  width: 90%;
+  margin: 2rem auto 1rem;
 }

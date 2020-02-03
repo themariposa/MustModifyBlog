@@ -5,7 +5,9 @@
 
   <body>
     <%= render partial:'layouts/navigation' %>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
     <%= render partial: 'layouts/footer' %>
   </body>
 </html>

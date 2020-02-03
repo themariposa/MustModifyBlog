@@ -16,7 +16,9 @@
  *= require footer
  *= require actiontext
  *= require_tree ./base
- *= require_tree ./features
  *= require_self
  */
 @import "bootstrap";
+@import "features/welcome";
+@import "features/portfolio";
+@import "features/posts";

@@ -7,12 +7,13 @@
 
 
 
-    <div class="container">
+    <main class="container">
       <% if !notice.blank? %>
         <div class="alert alert-info" role="alert"><%= notice %></p></div>
       <% end %>
-    <%= yield %>
-    </div>
+
+      <%= yield %>
+    </main>
 
   </body>
 </html>
