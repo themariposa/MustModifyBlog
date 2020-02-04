@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @font-face {
     font-family: 'Ganymede';
-    src: url('/assets/ganymede_regular-webfont.eot');
-    src: url('/assets/ganymede_regular-webfont.woff') format('woff'),
-         url('/assets/ganymede_regular-webfont.ttf') format('truetype'),
-         url('/assets/ganymede_regular-webfont.eot#iefix') format('embedded-opentype'),
-         url('/assets/ganymede_regular-webfont.svg#GanymedeRegular') format('svg');
+    src: asset-url('ganymede_regular-webfont.eot');
+    src: asset-url('ganymede_regular-webfont.woff') format('woff'),
+         asset-url('ganymede_regular-webfont.ttf') format('truetype'),
+         asset-url('ganymede_regular-webfont.eot#iefix') format('embedded-opentype'),
+         asset-url('ganymede_regular-webfont.svg#GanymedeRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
