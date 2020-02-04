@@ -10,33 +10,47 @@
     .os-project-list
       .os-project.card.card-body
         .os-image
-          .fa.fa-shapes
-
-        %h3=link_to 'Valuabe', 'http://valuable.mustmodify.com'
-        %p Valuable is basically attr_accessor on steoids. It aims to let you focus on your domain rather than creating routine getters and setters.
-        %p
-          =link_to 'Valuable repo at GitHub', "http://valuable.mustmodify.com/"
-          &gt;
-    .os-project-list
-      .os-project.card.card-body
-        .os-image
-          .fa.fa-film
+          .fal.fa-shapes
 
         .os-description
-          %h3=link_to 'Flix4r', 'http://flix4r.mustmodify.com'
-          %p
-            A ruby interface to the NetFlix API. Search through movies and get data about them. User-specific stuff has not been implemented.
-          %p
-            =link_to 'flix4r repo at GitHub', 'http://flix4r.mustmodify.com'
-            &gt;
-    .os-project-list
+          %h3=link_to 'Valuabe', 'http://valuable.mustmodify.com'
+          %p Valuable is my attempt to make modeling in Ruby easier. I find that I use a lot of Ruby and Rails design patterns that aren't built on top of ActiveRecord. Valuable makes the process of writing these utility classes simpler. I wrote it because I found it inefficient to write and rewrite similar constructors and attribute setters.
+          %p In a way, it's like attr_accessor on steoids. It aims to let you focus on your domain rather than creating routine getters and setters.
+
+          .links
+            =link_to 'Valuable repo at GitHub >', "http://valuable.mustmodify.com/", class: 'btn btn-os-link'
+            =link_to 'https://rubygems.org/gems/valuable', class: 'btn btn-link' do
+              .fal.fa-gem
+              Ruby Gems
+
+
       .os-project.card.card-body
         .os-image
-          .fa.fa-draw-polygon
+          .fal.fa-satellite-dish
 
-        %h3=link_to 'Sketch', 'http://sketch.mustmodify.com'
-        %p
-          Sketch makes it easy to create SVG images, and provides a library of existing images for your convenience.
-        %p
-          =link_to 'sketch repo at GitHub', 'http://sketch.mustmodify.com/'
-          &gt;
+        .os-description
+          %h3 collection-json.js
+          %p
+            Collection+JSON is a media type describing APIs that follow the principles described as HATEOAS (Hypertext As The Engine Of Application State). This module implements a collection+JSON client.
+          %p
+            I rewrote the existing NPM module which previously used coffeescript and also had many, many dependencies so that it resulted in quite a large distributed file. Finally, I used the
+            =link_to 'UMD (Universal Module Definition)', "https://github.com/umdjs/umd"
+            design pattern so that this module could be used as a constant and via <code>require</code> and <code>include</code> in js. This allows it to be used both on the web and on a server, in both enterprise-class apps and in very simple applications.
+          %p
+            =link_to 'collection-json.js on GitHub >', 'https://github.com/mustmodify/collection-json.js', class: 'btn btn-os-link'
+
+
+      .os-project.card.card-body
+        .os-image
+          .fal.fa-draw-polygon
+
+        .os-description
+          %h3=link_to 'Sketch', 'http://sketch.mustmodify.com'
+          %p
+            Sketch makes it easy to create SVG images, and provides a library of existing images for your convenience.
+          .links
+            =link_to 'sketch repo at GitHub >', 'http://sketch.mustmodify.com/', class: 'btn btn-os-link'
+            =link_to 'https://rubygems.org/gems/sketch', class: 'btn btn-link' do
+              .fal.fa-gem
+              Ruby Gems
+

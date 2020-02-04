@@ -14,18 +14,31 @@
 }
 
 main {
-  section:nth-child(2) {
-    background: #D8F4FF linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
-    border-bottom: 1px solid #88CEE7;
+  section:nth-child(1) {
+    //background: #a1c2e5 linear-gradient(#849ab1, #456484 3px, #829dba 15px);
+    background: #a1c2e5 linear-gradient(#849ab1, #456484 3px, #6e91b4 15px);
   }
 
   section:nth-child(3) {
+    //background: #D8F4FF linear-gradient(#B6E0F0, #88CEE7 3px, #D8F4FF 15px);
+    background: #D8F4FF linear-gradient(to right, #eafaff,  #a9dcf1, #6ec0e2);
+    border-bottom: 1px solid #88CEE7;
+  }
+
+  section:nth-child(4) {
     background-color: #F8F8F8;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255,255,255,0.3) 50%, rgba(255, 255, 255, 0)), url(/assets/textures/what-the-hex.png);;
   }
 }
 
+#message {
+  padding: 8rem 0;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
 #welcome-wrapper {
+
   #featured {
     display: none;
     padding: 20px 10px 0;
@@ -78,15 +91,14 @@ main {
 
 #open-source {
   color: #707070;
-  padding-top: 20px;
+  padding: 20px 0;
 
   .os-project-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 75%;
 
     .os-image {
-      float: left;
-
       color: #439F9E;
       height: 5rem;
       width: 5rem;
@@ -103,7 +115,14 @@ main {
     }
 
     .os-project{
+      .btn-os-link {
+        background-color: #ffffff9c;
+        color: darken(#439F9E, 20%);
+        font-weight: 500;
+      }
       color: white;
+
+      margin: 1rem 0;
 
       a {
         color: white;
@@ -114,7 +133,6 @@ main {
       background-color: #439F9E;
       .os-description {
         flex: 1 1 0;
-        font-size: 1.4rem;
       }
     }
   }
