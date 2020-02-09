@@ -4,6 +4,14 @@
   - Growing Furniture Repair Company
   - From a small regional player to a recognized national leader
   - Their software evolved rapidly to meet the changing business needs
+  overview: "10 years, 120 tables, helped the company grow through many transformations."
+  tech:
+  - Rails
+  - Cartography
+  - TDD
+  - External-facing APIs
+  - react.js
+  - Syncronized with vendors
   description:
   - This company started with one man repairing furniture in New York. Over time,
     this entrepreneur began hiring and training employees regionally. This required
@@ -51,6 +59,14 @@
   - Medical Result Presentation
   - Enhancing the delivery of proactive medicine
   - Supplementing the terrible presentations from EMRs
+  overview: "Acted as CTO, project manager and lead engineer, drove product design, and built great patient-centric medical software."
+  tech:
+  - Rails
+  - TDD
+  - react.js
+  - Collection+JSON
+  - HL7
+  - Lab Interfaces
   description:
   - This medical application was created for a concierge physician in New York City. He wanted a more sophisticated presentation for his high-end patients. He was dissatisfied with what was available from EMRs. So he began writing content about each test performed by his clinic, plus extensive introductions and other content. We started by generating a PDF with results and descriptions.
   - Together, we added many features that attempted to help patients own their health. For instance, my client would often get on his soapbox to complain about 'normal range' medicine... that is, having providers believe that any results within the 'normal' range (which means 95% of the population) don't need any kind of intervention. He believed strongly that you should proactively take steps (preferably starting with lifestyle changes) to mitigate or treat results that were borderline, or even on the low end of healthy. Despite this, he didn't have a solution. But I knew it bothered him.
@@ -71,6 +87,12 @@
   heading:
   - Medical Vacation Startup
   - Disrupting the traditional medical pricing model
+  overview: Technical leadership and engineering for a 'Traditional' startup. I built an API that was used by the front end.
+  tech:
+  - Rails
+  - Collection+JSON
+  - TDD
+  - Domain Modeling
   description:
   - A previous client referred this entrepreneur to me. His idea was a bold one that took advantage of the masses of medical data provided by the government. He wanted to find a way to negotiate with providers, anestheticians, and facilities across the country, and eventyall the globe, to provide a final price for a medical proceedure. We could then match a patient with competitive prices for an elective proceedure.
   - I worked with another developer to create a back end API that managed all the data and concepts for the software. We used an extensible API schema called Collection+JSON. During this time, we added to collection+JSON open-source tools both for Ruby and for Javascript.

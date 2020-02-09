@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def welcome
+    @projects = YAML.load(File.read('db/portfolio.yml'))
     render layout: 'wide'
   end
 

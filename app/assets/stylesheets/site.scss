@@ -6,3 +6,15 @@ body {
 .page-header {
   padding: 1rem 0;
 }
+
+.facts {
+  .fact {
+    .name, .value {
+      display: inline-block;
+    }
+
+    .name::after {
+      content: ': ';
+    }
+  }
+}

@@ -134,6 +134,10 @@ main {
       .os-description {
         flex: 1 1 0;
       }
+
+      .facts {
+        margin-bottom: 2rem;
+      }
     }
   }
   .project a:hover {
@@ -186,7 +190,7 @@ main {
       .image {
         text-align: center;
 
-        .fa {
+        .fal, .fa {
           //color: #3772FF;
           color: #FFD25A;
         }
@@ -208,7 +212,7 @@ main {
         .image {
           margin-bottom: 2rem;
         }
-        .fa {
+        .fal, .fa {
           font-size: 3rem;
         }
       }
@@ -239,4 +243,34 @@ main {
 .a-year-of-code img {
   width: 90%;
   margin: 2rem auto 1rem;
+}
+
+#projects {
+  h2 {
+    padding-top: 0.5em;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: left;
+    color: #3772FF;
+    text-shadow: 3px 2px 5px #BBB;
+  }
+
+  .project-group {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 3rem;
+    overflow-x: scroll;
+  }
+
+  .project {
+    background-color: white;
+    flex: 1 1 0;
+    min-width: 300px;
+    display: block;
+    margin: 2rem 2rem;
+    padding: 1rem;
+    box-shadow: 0 0 11px 13px #8CA1B359;
+
+    .technology { background-color: lightgrey; border-radius: 4px; padding: 2px 8px; margin: 2px; line-height: 2rem; display: inline; white-space: pre;}
+  }
 }
