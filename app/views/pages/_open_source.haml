@@ -7,82 +7,83 @@
         =link_to 'Gems', 'http://www.rubygems.org'
         , which other developers can freely use. This is a two-way street: the availability of other gems saves my clients money.
 
-    .os-project-list
-      .os-project.card.card-body
-        .os-image
-          .fal.fa-shapes
+    .os-project-list.row
+      .col-lg-10.col-xl-9
+        .os-project.card.card-body
+          .os-image
+            .fal.fa-shapes
 
-        .os-description
-          %h3=link_to 'Valuabe', 'http://valuable.mustmodify.com'
-          .facts
-            .fact
-              .name Language
-              .value
-                %i.fa.fa-gem
-                Ruby
-            .fact
-              .name Downloads
-              .value.valuable-downloads Over 900,000
-          %p Valuable is my attempt to make modeling in Ruby easier. I find that I use a lot of Ruby and Rails design patterns that aren't built on top of ActiveRecord. Valuable makes the process of writing these utility classes simpler. I wrote it because I found it inefficient to write and rewrite similar constructors and attribute setters.
-          %p In a way, it's like attr_accessor on steoids. It aims to let you focus on your domain rather than creating routine getters and setters.
+          .os-description
+            %h3=link_to 'Valuabe', 'http://valuable.mustmodify.com'
+            .facts
+              .fact
+                .name Language
+                .value
+                  %i.fa.fa-gem
+                  Ruby
+              .fact
+                .name Downloads
+                .value.valuable-downloads Over 900,000
+            %p Valuable is my attempt to make modeling in Ruby easier. I find that I use a lot of Ruby and Rails design patterns that aren't built on top of ActiveRecord. Valuable makes the process of writing these utility classes simpler. I wrote it because I found it inefficient to write and rewrite similar constructors and attribute setters.
+            %p In a way, it's like attr_accessor on steoids. It aims to let you focus on your domain rather than creating routine getters and setters.
 
-          .links
-            =link_to "http://valuable.mustmodify.com/", class: 'btn btn-os-link' do
-              %i.fab.fa-github
-              View Code at GitHub
-            =link_to 'https://rubygems.org/gems/valuable', class: 'btn btn-link' do
-              .fal.fa-gem
-              Ruby Gems
-
-
-      .os-project.card.card-body
-        .os-image
-          .fal.fa-satellite-dish
-
-        .os-description
-          %h3 collection-json.js
-          .facts
-            .fact
-              .name Language
-              .value
-                %i.fab.fa-js
-                javascript
-          %p
-            Collection+JSON is a media type describing APIs that follow the principles described as HATEOAS (Hypertext As The Engine Of Application State). This module implements a collection+JSON client.
-          %p
-            I rewrote the existing NPM module which previously used coffeescript and also had many, many dependencies so that it resulted in quite a large distributed file. Finally, I used the
-            =link_to 'UMD (Universal Module Definition)', "https://github.com/umdjs/umd"
-            design pattern so that this module could be used as a constant and via <code>require</code> and <code>include</code> in js. This allows it to be used both on the web and on a server, in both enterprise-class apps and in very simple applications.
-          %p
-            =link_to 'https://github.com/mustmodify/collection-json.js', class: 'btn btn-os-link' do
-              %i.fab.fa-github
-              View Code at GitHub
+            .links
+              =link_to "http://valuable.mustmodify.com/", class: 'btn btn-os-link' do
+                %i.fab.fa-github
+                View Code at GitHub
+              =link_to 'https://rubygems.org/gems/valuable', class: 'btn btn-link' do
+                .fal.fa-gem
+                Ruby Gems
 
 
-      .os-project.card.card-body
-        .os-image
-          .fal.fa-draw-polygon
+        .os-project.card.card-body
+          .os-image
+            .fal.fa-satellite-dish
 
-        .os-description
-          %h3=link_to 'Sketch', 'http://sketch.mustmodify.com'
-          .facts
-            .fact
-              .name Language
-              .value
-                %i.fa.fa-gem
-                Ruby
-            .fact
-              .name Downloads
-              .value.sketch-downloads Not None
-          %p
-            Sketch makes it easy to create SVG images, and provides a library of existing images for your convenience.
-          .links
-            =link_to 'http://sketch.mustmodify.com/', class: 'btn btn-os-link' do
-              %i.fab.fa-github
-              View Code at GitHub
-            =link_to 'https://rubygems.org/gems/sketch', class: 'btn btn-link' do
-              .fal.fa-gem
-              Ruby Gems
+          .os-description
+            %h3 collection-json.js
+            .facts
+              .fact
+                .name Language
+                .value
+                  %i.fab.fa-js
+                  javascript
+            %p
+              Collection+JSON is a media type describing APIs that follow the principles described as HATEOAS (Hypertext As The Engine Of Application State). This module implements a collection+JSON client.
+            %p
+              I rewrote the existing NPM module which previously used coffeescript and also had many, many dependencies so that it resulted in quite a large distributed file. Finally, I used the
+              =link_to 'UMD (Universal Module Definition)', "https://github.com/umdjs/umd"
+              design pattern so that this module could be used as a constant and via <code>require</code> and <code>include</code> in js. This allows it to be used both on the web and on a server, in both enterprise-class apps and in very simple applications.
+            %p
+              =link_to 'https://github.com/mustmodify/collection-json.js', class: 'btn btn-os-link' do
+                %i.fab.fa-github
+                View Code at GitHub
+
+
+        .os-project.card.card-body
+          .os-image
+            .fal.fa-draw-polygon
+
+          .os-description
+            %h3=link_to 'Sketch', 'http://sketch.mustmodify.com'
+            .facts
+              .fact
+                .name Language
+                .value
+                  %i.fa.fa-gem
+                  Ruby
+              .fact
+                .name Downloads
+                .value.sketch-downloads Not None
+            %p
+              Sketch makes it easy to create SVG images, and provides a library of existing images for your convenience.
+            .links
+              =link_to 'http://sketch.mustmodify.com/', class: 'btn btn-os-link' do
+                %i.fab.fa-github
+                View Code at GitHub
+              =link_to 'https://rubygems.org/gems/sketch', class: 'btn btn-link' do
+                .fal.fa-gem
+                Ruby Gems
 :javascript
   function format_large_number(number)
   {

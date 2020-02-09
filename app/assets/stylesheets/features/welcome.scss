@@ -96,7 +96,7 @@ main {
   .os-project-list {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    //width: 75%;
 
     .os-image {
       color: #439F9E;
@@ -137,6 +137,16 @@ main {
 
       .facts {
         margin-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .os-project {
+      display: block;
+
+        .os-image {
+          float: left;
+        }
       }
     }
   }
@@ -191,8 +201,8 @@ main {
         text-align: center;
 
         .fal, .fa {
-          //color: #3772FF;
           color: #FFD25A;
+          font-size: 3rem;
         }
       }
     }
@@ -211,9 +221,6 @@ main {
 
         .image {
           margin-bottom: 2rem;
-        }
-        .fal, .fa {
-          font-size: 3rem;
         }
       }
     }
