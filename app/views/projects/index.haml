@@ -1,0 +1,5 @@
+.projects-list
+  %h2 Sample Projects
+
+  -@projects.each do |project|
+    =render partial: 'projects/project', object: project

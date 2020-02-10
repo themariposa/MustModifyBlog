@@ -1,9 +1,0 @@
-.container
-  %h2 Project Profiles
-.project-group
-  -@projects.each do |project|
-    .project
-      %h5=project['heading'].first
-      =simple_format project['overview']
-      -project['tech'] && project['tech'].each do |tech|
-        .technology=tech
