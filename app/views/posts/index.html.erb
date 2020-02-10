@@ -1,14 +1,12 @@
-<section class="page-header">
-  <% if params[:category] %>
-    <h1>All Posts in <%= params[:category] %></h1>
-  <% else %>
-    <h1>Blog Posts</h1>
-  <% end %>
+<% if params[:category] %>
+  <%- page_title "MustModify Blog: All Posts for #{params[:category]}" %>
+<% else %>
+  <%- page_title "MustModify Blog: Recent Posts" %>
+<% end %>
 
-  <% if user_signed_in? %>
-    <%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
-  <% end %>
-</section>
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
+<% end %>
 
 <div class="row">
   <% @posts.each do |post| %>
