@@ -1,0 +1,34 @@
+.container
+  .row
+    .col-md-1
+    .col-md-10.post
+      %p
+      %h1= @post.title
+      %p
+        %strong By: Johnathon Wright on:
+        %span.creation_date= @post.created_at.to_date.strftime('%B %d, %Y')
+      - if user_signed_in?
+        = link_to 'Edit', edit_post_path(@post), class:"btn btn-primary"
+      %p= @post.text
+      - if @post.text.blank?
+        = markdown2html(@post.markdown_content)
+      - else
+        = @post.text
+      - if user_signed_in?
+        = link_to 'Edit', edit_post_path(@post), class:"btn btn-primary"
+      %br/
+      %br/
+      #comments
+        = render 'comments/form', comment: @comment
+        - @post.comments.each do |comment|
+          %p
+          .card.card-default
+            .card-body
+              %bold
+                = comment.author
+                said:
+                \#{comment.content.to_s.html_safe}
+          - if current_user
+            = link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger"
+      .col-md-1
+= link_to 'Back', posts_path
