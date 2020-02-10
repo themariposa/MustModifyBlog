@@ -1,5 +1,6 @@
 ---
 - codename: Castle
+  featured: true
   heading:
   - Growing Furniture Repair Company
   - From a small regional player to a recognized national leader
@@ -55,6 +56,7 @@
     caption: The service order page is dense with information, but is structured so that users can quickly see what's happening.
   awesome: couch
 - codename: analytics
+  featured: true
   heading:
   - Medical Result Presentation
   - Enhancing the delivery of proactive medicine

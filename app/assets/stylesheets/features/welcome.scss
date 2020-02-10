@@ -99,7 +99,7 @@ main {
     //width: 75%;
 
     .os-image {
-      color: #439F9E;
+      color: darken(#6ec0e2, 20%);
       height: 5rem;
       width: 5rem;
 
@@ -115,9 +115,11 @@ main {
     }
 
     .os-project{
+      background-color: #6ec0e2;
+
       .btn-os-link {
         background-color: #ffffff9c;
-        color: darken(#439F9E, 20%);
+        color: darken(#6ec0e2, 20%);
         font-weight: 500;
       }
       color: white;
@@ -130,7 +132,6 @@ main {
       flex-direction: row;
       flex: 1;
 
-      background-color: #439F9E;
       .os-description {
         flex: 1 1 0;
       }
@@ -253,6 +254,8 @@ main {
 }
 
 #projects {
+  padding-bottom: 4rem;
+
   h2 {
     padding-top: 0.5em;
     margin-bottom: 2rem;
@@ -265,19 +268,32 @@ main {
   .project-group {
     display: flex;
     flex-direction: row;
-    padding: 0 0 3rem;
-    overflow-x: scroll;
+    //overflow-x: scroll;
   }
 
   .project {
+    display: flex;
+    flex-direction: column;
+
     background-color: white;
     flex: 1 1 0;
     min-width: 300px;
-    display: block;
     margin: 2rem 2rem;
     padding: 1rem;
     box-shadow: 0 0 11px 13px #8CA1B359;
 
-    .technology { background-color: lightgrey; border-radius: 4px; padding: 2px 8px; margin: 2px; line-height: 2rem; display: inline; white-space: pre;}
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .project-heading { font-weight: 600; color: darken(#6EC0E3, 30%);}
+
+    .project-body {
+	    flex: 1 1 0;
+    }
+    .technology { background-color: #e1e1e1; border-radius: 4px; padding: 2px 8px; margin: 2px; line-height: 2rem; display: inline; white-space: pre; color: darken(#6ec0e2, 35%);}
   }
 }
