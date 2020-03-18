@@ -88,6 +88,14 @@ font-size: 18px;
         font-size: 23px;
         line-height: 1em;
 
+	.contact-details {
+          padding: 1rem 0;
+
+	  .contact-method + .contact-method {
+            padding: 0 15px;
+	  }
+        }
+
         @media only screen and (max-width: 991px) {
           display: none;
         }
