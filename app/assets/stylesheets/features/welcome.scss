@@ -26,8 +26,12 @@ main {
   }
 
   section:nth-child(4) {
-    background-color: #F8F8F8;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255,255,255,0.3) 50%, rgba(255, 255, 255, 0)), url(/assets/textures/what-the-hex.png);;
+  }
+
+  section:nth-child(5) {
+    //background-color: #F8F8F8;
+    //background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255,255,255,0.3) 50%, rgba(255, 255, 255, 0)), url(/assets/textures/what-the-hex.png);;
+    background-image: url(/assets/textures/what-the-hex.png);
   }
 }
 
@@ -265,35 +269,57 @@ main {
     text-shadow: 3px 2px 5px #BBB;
   }
 
-  .project-group {
-    display: flex;
-    flex-direction: row;
-    //overflow-x: scroll;
-  }
-
-  .project {
-    display: flex;
-    flex-direction: column;
-
-    background-color: white;
-    flex: 1 1 0;
-    min-width: 300px;
-    margin: 2rem 2rem;
-    padding: 1rem;
-    box-shadow: 0 0 11px 13px #8CA1B359;
-
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
+  @media only screen and (max-width: 767px) {
+    .project { background: white; border: 1px solid grey; margin: 1.5rem 0; padding: 1rem 1rem 0.5rem; }
 
     .project-heading { font-weight: 600; color: darken(#6EC0E3, 30%);}
 
-    .project-body {
-	    flex: 1 1 0;
-    }
-    .technology { background-color: #e1e1e1; border-radius: 4px; padding: 2px 8px; margin: 2px; line-height: 2rem; display: inline; white-space: pre; color: darken(#6ec0e2, 35%);}
+    .project-footer { display: none; }
   }
+
+  @media only screen and (min-width: 768px) {
+    .project-group {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+
+      background-color: white;
+      flex: 1 1 0;
+      min-width: 300px;
+      margin: 2rem 2rem;
+      padding: 1rem;
+      box-shadow: 0 0 11px 13px #8CA1B359;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .project-heading { font-weight: 600; color: darken(#6EC0E3, 30%);}
+
+      .project-body {
+              flex: 1 1 0;
+      }
+      .technology { background-color: #e1e1e1; border-radius: 4px; padding: 2px 8px; margin: 2px; line-height: 2rem; display: inline; white-space: pre; color: darken(#6ec0e2, 35%);}
+    }
+  }
+}
+
+#ideal-clients {
+  padding: 20px;
+  h2 {
+    padding-top: 0.5em;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: left;
+    color: #3772FF;
+    text-shadow: 3px 2px 5px #BBB;
+  }
+
 }

@@ -6,7 +6,7 @@
         =link_to project['heading'].first, project_path(project['codename'])
       .project-body
         =simple_format project['overview']
-        -project['tech'] && project['tech'].each do |tech|
-          .technology=tech
+        /-project['tech'] && project['tech'].each do |tech|
+        /  .technology=tech
       .project-footer
         =link_to 'Learn More', project_path(project['codename']), class: 'btn btn-link'
