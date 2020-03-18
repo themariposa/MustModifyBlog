@@ -1,6 +1,6 @@
 Rails.application.configure do
 
-  config.hosts << "dev.blog.mustmodify.com"
+  config.hosts << "dev.mustmodify.com"
 
   # Settings specified here will take precedence over those in config/application.rb.
 

@@ -47,7 +47,7 @@
   screen_shots:
   - src: furniture-repair-rails-app-2.png
     alt: Operations Dashboard
-    caption: This dashboard shows the status of current operations in the field and at the call center.
+    caption: This dashboard is my attempt to give this team better, more timely visibility into their operations.
   - src: furniture-repair-client-view.png
     alt: Furniture Repair Rails App Screenshot
     caption: We started off collecting basic information. Then we were able to get higher-level visibility about profitability and success rates.
@@ -58,10 +58,10 @@
 - codename: analytics
   featured: true
   heading:
-  - Medical Result Presentation
-  - Enhancing the delivery of proactive medicine
+  - Concierge Medical Consultations
+  - Enhancing the delivery of high-end proactive medicine
   - Supplementing the terrible presentations from EMRs
-  overview: "Acted as CTO, project manager and lead engineer, drove product design, and built great patient-centric medical software."
+  overview: "Acted as CTO, project manager and lead engineer; drove product design, and built great patient-centric medical software."
   tech:
   - Rails
   - TDD
@@ -85,8 +85,20 @@
   - src: medical-presentations-2.png
   - src: medical-presentations-3.png
   awesome: analytics
-- codename: medycation
+- codename: OnBoard
   featured: true
+  heading:
+  - Offshore Staffing Agency
+  overview: "Transitioned a growing company from listing employees on whiteboards to using a database."
+  tech:
+  - Rails
+  - TDD
+  description:
+  - This project was planned and written by another developer. For various reasons, the relationship soured during development and the project was never delivered to the client. I took over the existing design, rewrote it in Rails, and worked with the client to streamline some of the ideas that seemed like they might provide less actual value over time. This reduced the number of moving parts, and with it, the delivery time. Over time, we continued to reduce complexity, but added other features that provided even greater value.
+  quotes:
+  - "What you made is perfect for us... works great. That's probably what we originally wanted [but didn't know it.]"
+- codename: medycation
+  featured: false
   heading:
   - Medical Vacation Startup
   - Disrupting the traditional medical pricing model
@@ -127,7 +139,9 @@
   heading:
   - Australian Real Estate Showcase Site
   description:
-  - My client manages listings for real estate agents in Australia. They created a rich API over the years, which they were in the process of transitioning to Rails. This project involved consuming the API via ActiveResources, displaying that information on a public-facing site, searching through listings, creating users, remembering favorite properties, and gathering data about users' interests. I worked with an existing template and, in slow steps, tried to improved the UI while using ajax in a less-flashy way to draw in more clients.
+  - My client manages listings for real estate agents in Australia. They created a rich API over the years, which they were in the process of transitioning to Rails. This project involved gathering information from their API and showing it in a variety of formats (since their clients each wanted distinctive websites.)
+  - There were two significant challenges on this project. The first was that they were "doing Rails wrong." They were rewriting it from PHP, and had unintentionally brought along much of the baggage they were trying to escape. I was only mildly able to convine them of REST... but I learned alot from that experience.
+  - A more technical challenge was sycronizing local data with an API. If the API deletes data, what do I do with my local information? etc.
   quotes:
   - Johnathon communicates technical details very well and has understood the requirements for the project without a great deal of explanation or input... I would not hesitate to recommend him to anyone seeking an expert Rails developer.
   screen_shots:
@@ -144,44 +158,25 @@
   screen_shots:
   - src: photography-studio-rails-app.jpg
   awesome: camcorder
-- codename: institute
-  heading:
-  - Institute Management System
-  description:
-  -  The team created a web-based employee and project management system for a non-profit organization. This app replace their existing system, but the client had a wealth of ideas about expanding the system.  My role in this project was "technical lead". I set up the initial project and chose the gems we would be using to start. As the project got underway, I was just another developer, though as usual, I reviewed some of the commits as they came across, occasionally prodding devs to improve their code, and ensuring that test coverage was high.
-  screen_shots:
-  - src: institution-management-rails-app.png
-  awesome: tasks
 - codename: domain-catcher
   heading:
   - Prospecting in the Dropped Domains market
   description:
-  - Every morning, this application retrieves a list of expiring domains, issues web service calls to Yahoo and Google to check for SEO value, categories the domains by keyword, and uses all that data plus some heuristics to create a customized report which is sent by email. In order to process the 10s of thousands of entries in a timely manner, it uses concurrent workers and job queues.
+  - Every morning, this application retrieves a list of expiring domains, issues web service calls to Yahoo and Google to check for SEO value, categories the domains by keyword, and uses all that information to create a customized report for our target audience. The biggest challenge on this project was finding a way to process 10s of thousands of entries in a timely manner.
   screen_shots:
   - src: domain-catcher.jpg
   awesome: funnel-dollar
-- codename: chomp
-  heading:
-  - Busy food content site
-  description:
-  - I worked on a variety of bug-fixes and new features for this site. The most interesting task involved ajax-ifying some user-specific content on pages which were otherwise static. This allowed us to make better use of caching, while still providing a customized user experience.
-  screen_shots:
-  - src: food-rails-app.jpg
-  awesome: hamburger
-- codename: apartments
-  heading:
-  - Real Estate Rental Finder
-  description:
-  - This Rails application is built on top of a fairly unusual data source . a hypercube engine. It was transitioned from .net to take advantage of Rails' fast development cycles and refactorability. Some of the major considerations during the development of the site were SEO, maintaining the existing link structure, and a fantastic user experience.
-  screen_shots:
-  - src: apartments-and-townhouse-rentals.jpg
-  awesome: building
+  tech:
+  - APIs
+  - background workers
 - codename: staples
   heading:
   - E-Commerce Website
   - My first real programming job!
+  - I lead a team that tripled sales by taking advantage of a whole new marketing medium. The web thing.
   description:
   - My first real web application was working on www.massageking.com. The company sells massage tables, charts, videos, massage lotion, etc., to massage therapists, chiropracters and day spas. The site was written in a framework we created with PHP.
+  - Previously the company focused all of their marketing on ebay sales and on magazine ads. While successful, they had plateaued. We created the site from scratch, since either the tools didn't exist at the time or we couldn't find any that met our search-engine-friendly criteria. It was a good time and a huge success.
   screen_shots:
-  - src: ecommerce-app.png
+  - src: ecommerce-front.png
   awesome: file-code

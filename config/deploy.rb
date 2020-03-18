@@ -38,3 +38,13 @@ set :keep_releases, 5
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+namespace :deploy do
+  desc "Restarting mod_rails with restart.txt"
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    usr2_signal = 12
+    quit_signal = 3
+
+    run "cd #{current_path} && if [ -f tmp/pids/puma.pid ]; then kill -s #{usr2_signal} `cat tmp/pids/puma.pid`; fi"
+  end
+end
