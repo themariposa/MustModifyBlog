@@ -2,17 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .post{
-	.creation_date{
-		padding-left: 2em;
-	}
+  .post-title {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: blue;
+    font-weight: 600;
+  }
 
-	h1{
-		font-size: 2rem;
-		border-bottom: 1px solid blue;
-	}
+  .creation_date {
+    padding-left: 0.3em;
+  }
 }
 
 .post-category{
-	padding-bottom: 8px;
-	display: block;
+  padding-bottom: 8px;
+  display: block;
 }
