@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'category_posts' => 'posts#category_posts'
   #get '/:name' => 'posts#user_posts', as: :user_posts
 
+  resources 'birdsongs'
+
   resources :comments
   resources :posts
   resources :projects
