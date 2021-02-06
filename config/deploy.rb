@@ -43,6 +43,7 @@ namespace :deploy do
   desc "Restarting mod_rails with restart.txt"
   task :restart do
     on roles(:app) do
+    #on(:app) do
       usr2_signal = 12
       quit_signal = 3
 
